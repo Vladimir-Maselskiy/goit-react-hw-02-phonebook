@@ -1,12 +1,13 @@
+import { Box } from 'components/Form/Form.styled';
 import { Component } from 'react';
+import { ContactsList } from './Contacts.styled';
 
 export class Contacts extends Component {
   render() {
     const { contacts, onDelete } = this.props;
     return (
-      <div>
-        <h2>Contacts</h2>
-        <ul>
+      <Box>
+        <ContactsList>
           {contacts.map(contact => (
             <li key={contact.id}>
               {contact.name} {contact.number}
@@ -15,8 +16,8 @@ export class Contacts extends Component {
               </button>
             </li>
           ))}
-        </ul>
-      </div>
+        </ContactsList>
+      </Box>
     );
   }
 }

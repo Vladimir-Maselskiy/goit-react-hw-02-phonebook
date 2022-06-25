@@ -1,8 +1,9 @@
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
-import { Contacts } from './Contacts/Contacts';
-import Filter from './Filter/Filter';
-import { Form } from './Form/Form';
+import { Contacts } from '../Contacts/Contacts';
+import Filter from '../Filter/Filter';
+import { Form } from '../Form/Form';
+import { Container, Title } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -46,28 +47,20 @@ export class App extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
+      <Container>
         React homework template
         <Form onSubmit={this.handleFormSubmit} />
+        <Title>Find contacts by name</Title>
         <Filter
           value={this.state.filter}
           onFilterChange={this.handleFilterChange}
         />
+        <Title>Contacts</Title>
         <Contacts
           contacts={this.getVisibleContacts()}
           onDelete={this.handlerDeleteButton}
         />
-      </div>
+      </Container>
     );
   }
 }
