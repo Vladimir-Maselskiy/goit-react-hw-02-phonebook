@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import { Box, ErrorStiled, InputForm } from './Form.styled';
+import { Box, ErrorStyled, InputForm } from './Form.styled';
 import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 
@@ -41,12 +41,12 @@ export function Form(props) {
           <label htmlFor={nameInputId}>
             Name
             <Field id={nameInputId} type="text" name="name" />
-            <ErrorStiled name="name" component="div" />
+            <ErrorStyled name="name" component="div" />
           </label>
           <label htmlFor={numberInputId}>
             Number
             <Field id={numberInputId} type="tel" name="number" />
-            <ErrorStiled name="number" component="div" />
+            <ErrorStyled name="number" component="div" />
           </label>
           <button type="submit">Add Contact</button>
         </InputForm>

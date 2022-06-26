@@ -37,7 +37,7 @@ export const InputForm = styled(Form)`
   }
 `;
 
-export const ErrorStiled = styled(ErrorMessage)`
+export const ErrorStyled = styled(ErrorMessage)`
   color: red;
   font-size: 12px;
   position: absolute;
