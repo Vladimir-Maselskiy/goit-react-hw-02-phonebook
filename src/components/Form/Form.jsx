@@ -16,7 +16,7 @@ let schema = yup.object().shape({
     )
     .required(),
   number: yup
-    .number()
+    .string()
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
       'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
