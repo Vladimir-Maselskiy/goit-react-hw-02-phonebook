@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Form } from 'formik';
 
 export const Box = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const Box = styled.div`
   padding-bottom: 10px;
 `;
 
-export const InputForm = styled.form`
+export const InputForm = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: center;
