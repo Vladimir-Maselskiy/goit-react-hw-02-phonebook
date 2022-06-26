@@ -5,7 +5,7 @@ import * as yup from 'yup';
 
 const nameInputId = nanoid();
 const numberInputId = nanoid();
-const initialValues = { name: 'Billy', number: '1234567' };
+const initialValues = { name: '', number: '' };
 
 let schema = yup.object().shape({
   name: yup
