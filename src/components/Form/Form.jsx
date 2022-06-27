@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { Box, ErrorStyled, InputForm } from './Form.styled';
 import { Formik, Field } from 'formik';
