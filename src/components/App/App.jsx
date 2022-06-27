@@ -18,7 +18,11 @@ export class App extends Component {
 
   handleFormSubmit = data => {
     const { name, number } = data;
-    if (this.state.contacts.find(contact => contact.name === name)) {
+    if (
+      this.state.contacts.find(
+        contact => contact.name.toLowerCase() === name.toLowerCase()
+      )
+    ) {
       alert(`${name} is already in contacts`);
       return;
     }
@@ -27,9 +31,8 @@ export class App extends Component {
     });
     return true;
   };
-  handlerDeleteButton = event => {
-    console.log(event.target);
-    const id = event.target.id;
+
+  handlerDeleteButton = id => {
     this.setState({
       contacts: this.state.contacts.filter(contact => contact.id !== id),
     });

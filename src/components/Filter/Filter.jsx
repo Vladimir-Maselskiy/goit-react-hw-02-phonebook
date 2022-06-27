@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 export default function Filter(props) {
   const { value, onFilterChange } = props;
   return (
@@ -6,3 +9,8 @@ export default function Filter(props) {
     </div>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
+};

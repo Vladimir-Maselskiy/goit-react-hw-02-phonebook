@@ -54,3 +54,7 @@ export function Form(props) {
     </Box>
   );
 }
+
+Formik.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
